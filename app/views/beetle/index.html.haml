@@ -1,0 +1,16 @@
+%h1 Beetle directory
+%table
+  %tr
+    %th Name
+    %th Food
+    %th Rarity
+    %th Portrait
+  - @beetles.each do |beetle|
+    %tr
+      %td= beetle.name
+      %td= beetle.favorite_food
+      %td= beetle.rarity
+      %td
+        %img{src: "/pasted_image.png", style:"width: 120px"}
+
+= link_to "Spawn", beetle_create_path
